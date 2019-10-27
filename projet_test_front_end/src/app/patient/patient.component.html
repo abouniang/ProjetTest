@@ -1,0 +1,103 @@
+<div class="form-div">
+<div class="card" style="width: 60rem;">
+  <div class="card-body">
+      <div class="section-title">
+    <h5 class="card-title">App</h5>
+    </div>
+    <hr>
+    <form>
+
+    <div class="section-title">
+        <button class="btn btn-primary" disabled="true">Etat civil</button>
+      </div>
+      <div class="col-md-8" style="border-top: groove 1px;
+      border-right: groove 1px; padding: 5px">
+        <div class="form-group row">
+          <label for="nom" class="col-sm-2 col-form-label">Nom</label>
+          <div class="col-sm-5">
+            <input type="text" [(ngModel)]="patient.nom" class="form-control" id="nom" name="nom" placeholder="">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="prenom" class="col-sm-2 col-form-label">Prénom</label>
+          <div class="col-sm-5">
+            <input type="text" [(ngModel)]="patient.prenom" class="form-control" id="prenom" name="prenom" placeholder="">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="dateNaissance" class="col-sm-3 col-form-label">Date de naissance</label>
+          <div class="col-sm-5">
+            <input type="text" [(ngModel)]="patient.dateNaissance" class="form-control" id="dateNaissance" name="dateNaissance" placeholder="">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="dateNaissance" class="col-sm-2 col-form-label"></label>
+          <div class="col-sm-8">
+            <select [(ngModel)]="patient.sexe" name="sexe" class="selectpicker">
+              <option>Femme</option>
+              <option>Homme</option>
+            </select>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <button class="btn btn-primary" disabled="true">Consultation</button>
+      </div>
+      <div class="col-md-8" style="border-top: groove 1px;
+      border-right: groove 1px; border-bottom: groove 1px; padding: 5px">
+          <div class="form-group row">
+            <label for="nom" class="col-sm-3 col-form-label">Groupe Sanguin</label>
+            <div class="col-sm-5">
+                <select [(ngModel)]="patient.groupeSanguin" name="groupeSanguin" class="selectpicker">
+                <option>O+</option>
+                <option>A</option>
+                <option>A+</option>
+                <option>B</option>
+                <option>B+</option>
+                <option>AB</option>
+                <option>0-</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="prenom" class="col-sm-2 col-form-label">Poids</label>
+            <div class="col-sm-5">
+              <div class="form-div">
+              <input type="text" [(ngModel)]="patient.poids" class="form-control" id="poids" name="poids" placeholder="">
+              <span style="padding-left: 5px">Kg</span>
+            </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="taille" class="col-sm-2 col-form-label">Taille</label>
+            <div class="col-sm-5">
+                <div class="form-div">
+              <input type="text" [(ngModel)]="patient.taille" class="form-control" id="taille" name="taille" placeholder="">
+              <span style="padding-left: 5px">cm</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+              <label for="observation" class="col-sm-3 col-form-label">Observations</label>
+              <div class="col-sm-5">
+                <input type="text" [(ngModel)]="patient.observation" class="form-control" name="observation" id="observation" placeholder="">
+              </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+        <div class="submit-button">
+            <button class="btn btn-primary" (click)="savePatient()">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
